@@ -1,6 +1,6 @@
 map = {}
 sounds = {}
-sounds.music = love.audio.newSource("magicbattle.mp3", "stream")
+sounds.music = love.audio.newSource("assets/sounds&music/magicbattle.mp3", "stream")
 platform = {
 		x = 400,
 		y = 500,

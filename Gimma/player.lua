@@ -1,4 +1,5 @@
 player = {
+		sprite =love.graphics.newImage("assets/characters/player.png") ,
 		x = 20,
 		y = 500,
 		w = 50,
@@ -13,9 +14,9 @@ player = {
 				x = 0,
 				y = 0
 			},
-			speed = 0.8,
+			speed = 0.7,
 			gravity = 0.03,
-			jump_force = 3.5,
+			jump_force = 3,
 		},
 	}
 
@@ -80,13 +81,14 @@ end
 
 
 player.draw = function()
-	love.graphics.rectangle(
-		"fill",
-		player.x,
-		player.y,
-		player.w,
-		player.h
-	)
+	love.graphics.draw(
+			player.sprite,
+			player.x,
+			player.y,
+			0,
+			1.5,
+			1.5
+		)
 
 	love.graphics.setColor( 1, 0, 0 )
 

@@ -1,4 +1,5 @@
 boss = {
+	sprite =love.graphics.newImage("assets/characters/boss.png") ,
 	x = 0,
 	y = 0,
 	w = 100,
@@ -19,6 +20,7 @@ boss = {
 		},
 	},
 }
+boss.sprite:setFilter("nearest", "nearest")
 
 boss.update = function()
 	
@@ -47,13 +49,14 @@ end
 
 
 boss.draw = function()
-	love.graphics.rectangle(
-		"fill",
-		boss.x,
-		boss.y,
-		boss.w,
-		boss.h
-	)	
+	love.graphics.draw(
+			boss.sprite,
+			boss.x,
+			boss.y,
+			0,
+			2,
+			2
+		)
 	love.graphics.setColor( 1, 0, 0 )
 
 	love.graphics.rectangle(
