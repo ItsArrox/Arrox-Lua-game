@@ -2,6 +2,7 @@ require "player"
 require "boss"
 require "map"
 require "bullet"
+require "zoetwaterpiraat"
 
 love.load = function()
 	background = love.graphics.newImage("assets/environment/background.jpg")
@@ -14,6 +15,7 @@ love.update = function()
 	boss.update()
 	map.update()
 	bullet.update()
+	zoetwaterpiraat.update()
 	
 end
 
@@ -27,6 +29,7 @@ love.draw = function()
 	boss.draw()
 	map.draw()
 	bullet.draw()
+	zoetwaterpiraat.draw()
 
 	--love.graphics.print(tostring(player.physics.grounded), 10, 10)
 	--love.graphics.print(tostring(#projectiles), 10, 30)

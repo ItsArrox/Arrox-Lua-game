@@ -64,12 +64,12 @@ player.update = function()
 	end
 
 	if boss.health <= 0 then
-		win = love.window.showMessageBox("you win", "congratulations you defeated the boss!", "info", true )
+		win = love.window.showMessageBox("boss defeated", "congratulations you defeated the boss!", "info", true )
 		love.event.quit()
 end
 
 	if player.health <= 0 then
-		win = love.window.showMessageBox("try again", "you died. L", "error", true )
+		win = love.window.showMessageBox("you died", "the boss has defeated you. Try again.", "error", true )
 		love.event.quit()
 
 	end

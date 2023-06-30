@@ -38,6 +38,7 @@ bullet.update = function()
 end
 
 bullet.draw = function()
+love.graphics.setColor( 0, 0, 1 )
 	for i, projectile in pairs(projectiles) do
 		love.graphics.rectangle(
 			"fill",
@@ -46,5 +47,7 @@ bullet.draw = function()
 			projectile.w,
 			projectile.h
 			)
+
 	end
+	love.graphics.setColor( 1, 1, 1 )
 end
